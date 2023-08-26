@@ -24,10 +24,10 @@ public class Board {
         while (counter > 0) {
             int x = random.nextInt(col);
             int y = random.nextInt(row);
-            int coordinate = grid[x][y];
+            int coordinate = grid[y][x];
             if (coordinate == 0) {
                 counter--;
-                grid[x][y] = 1;
+                grid[y][x] = 1;
             }
         }
     }
@@ -77,7 +77,7 @@ public class Board {
     public void draw(Graphics2D g2) {
         for (int y = 0; y < row; y++) {
             for (int x = 0; x < col; x++) {
-                if (grid[x][y] == 1) {
+                if (grid[y][x] == 1) {
                     g2.fillRect(x * size, y * size, size, size);
                 }
             }

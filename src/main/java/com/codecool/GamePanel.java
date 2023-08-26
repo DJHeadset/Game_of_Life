@@ -6,11 +6,11 @@ import java.awt.*;
 public class GamePanel extends JPanel implements Runnable {
     //SCREEN SETTINGS
     private final int tileSize = 10;
-    private final int maxScreenCol = 100;
-    private final int maxScreenRow = 100;
-    private final int startingNumberOfAliveCells = 3000;
-    private final int screenWidth = maxScreenRow * tileSize;
-    private final int screenHeight = maxScreenCol * tileSize;
+    private final int maxScreenCol = 130;
+    private final int maxScreenRow = 70;
+    private final int startingNumberOfAliveCells = 2000;
+    private final int screenWidth = maxScreenCol * tileSize;
+    private final int screenHeight = maxScreenRow * tileSize;
 
     //FPS
     private final int FPS = 60;
