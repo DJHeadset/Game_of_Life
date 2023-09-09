@@ -1,9 +1,13 @@
 package com.codecool;
 
+import com.codecool.logger.FileLogger;
+import com.codecool.logger.Logger;
+
 import java.awt.*;
 import java.util.Random;
 
 public class Board {
+    Logger logger = new FileLogger();
     GamePanel gp;
     private final int[][] grid;
     private final int row;
@@ -75,12 +79,15 @@ public class Board {
 
 
     public void draw(Graphics2D g2) {
+        int population = 0;
         for (int y = 0; y < row; y++) {
             for (int x = 0; x < col; x++) {
                 if (grid[y][x] == 1) {
                     g2.fillRect(x * size, y * size, size, size);
+                    population++;
                 }
             }
         }
+        logger.LogInfo(population);
     }
 }
