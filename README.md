@@ -1,5 +1,7 @@
 Conway's Game of Life
-Game of Life
+
+![Screenshot 2023-10-24 104735](https://github.com/DJHeadset/Game_of_Life/assets/115445237/416f9b5a-3cae-4ab9-ac4c-32153a9851ad)
+
 
 This is a Java-based application that simulates Conway's "Game of Life," a classic cellular automaton. The project provides a visual representation of the simulation using Java's JPanel and includes a feature to export the simulation data into a CSV (Comma-Separated Values) file.
 
