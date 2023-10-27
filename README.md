@@ -1,5 +1,6 @@
 Conway's Game of Life
-Game of Life
+Game of Life![img](https://github.com/DJHeadset/Game_of_Life/assets/115445237/2d640f90-2cc2-4e70-bb64-fcf8d06aa57e)
+
 
 This is a Java-based application that simulates Conway's "Game of Life," a classic cellular automaton. The project provides a visual representation of the simulation using Java's JPanel and includes a feature to export the simulation data into a CSV (Comma-Separated Values) file.
 
@@ -12,6 +13,7 @@ Visual Simulation: The application visually displays the Game of Life simulation
 CSV Export: This feature allows you to export the simulation data into a CSV file, providing a structured record of the simulation's state over time. The file is found in "src/resources/population.csv"
 
 Settings: The variables located in the 'GamePanel' file, they can be edited there.
+
     maxScreenCol/maxScreenCol:  Representing the width and height of the JPanel's size (in pixel).
     tileSize:                   Represents the size of each cell (in pixel).
     FPS:                        Represents the refresh rate.
