@@ -18,8 +18,8 @@ public class Board {
     public Board(int row, int col, GamePanel gp) {
         this.gp = gp;
         grid = new int[row][col];
-        this.row = gp.getMaxScreenRow();
-        this.col = gp.getMaxScreenCol();
+        this.row = gp.getScreenRow();
+        this.col = gp.getScreenCol();
         size = gp.getTileSize();
     }
 

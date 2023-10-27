@@ -6,16 +6,21 @@ import java.awt.*;
 public class GamePanel extends JPanel implements Runnable {
     //SCREEN SETTINGS
     private final int tileSize = 10;
-    private final int maxScreenCol = 1500/tileSize;
-    private final int maxScreenRow = 750/tileSize;
+    private final int maxScreenCol = 1500;
+    private final int maxScreenRow = 750;
+    private final int screenCol = maxScreenCol/tileSize;
+    private final int screenRow = maxScreenRow/tileSize;
+
+    //FPS
+    int FPS = 30;
 
     //SYSTEM
     Thread gameThread;
-    Board board = new Board(maxScreenRow,maxScreenCol,this);
+    Board board = new Board(screenRow, screenCol,this);
 
     public GamePanel() {
-        int screenWidth = maxScreenCol * tileSize;
-        int screenHeight = maxScreenRow * tileSize;
+        int screenWidth = screenCol * tileSize;
+        int screenHeight = screenRow * tileSize;
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.WHITE);
         this.setDoubleBuffered(true);
@@ -26,16 +31,16 @@ public class GamePanel extends JPanel implements Runnable {
         return tileSize;
     }
 
-    public int getMaxScreenCol() {
-        return maxScreenCol;
+    public int getScreenCol() {
+        return screenCol;
     }
 
-    public int getMaxScreenRow() {
-        return maxScreenRow;
+    public int getScreenRow() {
+        return screenRow;
     }
 
     public void setupGame() {
-        int startingNumberOfAliveCells = (maxScreenCol * maxScreenRow) / 2;
+        int startingNumberOfAliveCells = (screenCol * screenRow) / 2;
         board.setUpBoard(startingNumberOfAliveCells);
     }
 
@@ -46,8 +51,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     @Override
     public void run() {
-        //FPS
-        int FPS = 30;
+
         double drawInterval = 1000000000 / FPS;
         double delta = 0;
         long lastTime = System.nanoTime();
