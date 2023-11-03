@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class FileLogger implements Logger {
 
-    private final String logFile = "src/resources/population.csv";
+    private final String logFile = "src/main/resources/csvfile/population.csv";
 
     @Override
     public void LogInfo(int population) {
