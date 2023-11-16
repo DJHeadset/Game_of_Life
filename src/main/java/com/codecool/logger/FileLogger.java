@@ -20,4 +20,13 @@ public class FileLogger implements Logger {
     public void logError() {
 
     }
+
+    @Override
+    public void ClearFile() {
+        try(FileWriter writer = new FileWriter(logFile)) {
+            writer.write((""));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

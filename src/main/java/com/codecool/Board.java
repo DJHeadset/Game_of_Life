@@ -88,6 +88,6 @@ public class Board {
                 }
             }
         }
-        //logger.LogInfo(population);
+        logger.LogInfo(population);
     }
 }

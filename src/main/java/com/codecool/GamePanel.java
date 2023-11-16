@@ -1,11 +1,14 @@
 package com.codecool;
 
+import com.codecool.logger.FileLogger;
+import com.codecool.logger.Logger;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class GamePanel extends JPanel implements Runnable {
     //SCREEN SETTINGS
-    private final int tileSize = 10;
+    private final int tileSize = 5;
     private final int maxScreenCol = 1500;
     private final int maxScreenRow = 750;
     private final int screenCol = maxScreenCol/tileSize;
@@ -40,7 +43,9 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void setupGame() {
+        Logger logger = new FileLogger();
         int startingNumberOfAliveCells = (screenCol * screenRow) / 2;
+        logger.ClearFile();
         board.setUpBoard(startingNumberOfAliveCells);
     }
 
